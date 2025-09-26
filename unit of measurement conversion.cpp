@@ -44,8 +44,6 @@ int main() {
     int opt;
     double val;
 
-    cout << "c++ unit converter (length / mass / time)" << endl;
-
     cout << "select the conversion operation:" << endl;
     cout << "1. centimeters to meters" << endl;
     cout << "2. meters to centimeters" << endl;
@@ -57,17 +55,17 @@ int main() {
     cout << "8. hours to minutes" << endl;
     cout << "9. exit" << endl;
 
-    cout << "enter your choice (1 to 9): ";
+    cout << "enter your choice (1 to 9): " << endl;
 
     if (!(cin >> opt)) {
-        cerr << "\ninvalid input. please enter a number." << endl;
+        cerr << "invalid input. please enter a number." << endl;
         return 1;
     }
 
     cout << fixed << setprecision(2);
 
     if (opt == 1) {
-        cout << "\nenter the value in centimeters: ";
+        cout << "enter the value in centimeters: " <<endl;
         cin >> val;
         cout << "value in meters: " << cm_to_m(val) << " m" << endl;
 
@@ -77,41 +75,42 @@ int main() {
         cout << "value in centimeters: " << m_to_cm(val) << " cm" << endl;
 
     } else if (opt == 3) {
-        cout << "\nenter the value in grams: ";
+        cout << "enter the value in grams: " <<endl;
         cin >> val;
         cout << "value in kilograms: " << g_to_kg(val) << " kg" << endl;
 
     } else if (opt == 4) {
-        cout << "\nenter the value in kilograms: ";
+        cout << "enter the value in kilograms: " << endl;
         cin >> val;
         cout << "value in grams: " << kg_to_g(val) << " g" << endl;
 
     } else if (opt == 5) {
-        cout << "\nenter the value in seconds: ";
+        cout << "enter the value in seconds: " << endl;
         cin >> val;
         cout << "value in minutes: " << sec_to_min(val) << " min" << endl;
 
     } else if (opt == 6) {
-        cout << "\nenter the value in minutes: ";
+        cout << "enter the value in minutes: "<< endl;
         cin >> val;
         cout << "value in seconds: " << min_to_sec(val) << " sec" << endl;
 
     } else if (opt == 7) {
-        cout << "\nenter the value in minutes: ";
+        cout << "enter the value in minutes: "<<endl;
         cin >> val;
         cout << "value in hours: " << min_to_hr(val) << " hr" << endl;
 
     } else if (opt == 8) {
-        cout << "\nenter the value in hours: ";
+        cout << "enter the value in hours: " << endl;
         cin >> val;
         cout << "value in minutes: " << hr_to_min(val) << " min" << endl;
 
     } else if (opt == 9) {
-        cout << "\nthank you for using the converter. goodbye!" << endl;
+        cout << "thank you for using the converter. goodbye!" << endl;
 
     } else {
-        cout << "\ninvalid choice. please enter a number between 1 and 9." << endl;
+        cout << "invalid choice. please enter a number between 1 and 9." << endl;
     }
 
     return 0;
+
 }
